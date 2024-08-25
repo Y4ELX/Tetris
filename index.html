@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+</head>
+<style>
+
+    @font-face {
+        font-family: tetris;
+        src: url(assets/pixel.ttf);
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        cursor: none;
+
+        background-size: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        height: 100vh;
+    }
+
+    canvas{
+        padding: 2vh;
+        border: solid 0.1vh #1cda16;
+        background-color: #000000;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Agrega esta línea */
+        border-radius: 2vh;
+    }
+
+    .pantalla{
+        padding: 2vh;
+        z-index: 10; 
+        width: 300px; 
+        height: 600px; 
+        position: absolute; 
+        opacity: 0.8;
+        border-radius: 2vh;
+        
+        box-shadow: 0px 0px 10vh #1dda1642;
+    }
+
+    .puntaje{
+        background-color: transparent;
+        top: calc(50% - 30vh);
+        left: 10vh;
+        width: 60vh; 
+        height: 60vh; 
+        position: absolute; 
+        border-radius: 2vh;
+        color: #1cda16;
+
+        font-family: tetris;
+        text-wrap: wrap;
+        font-size: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0px 0px 10vh #1dda1661;
+    }
+    
+
+
+
+</style>
+<body>
+        <canvas id="tetris"></canvas>
+        <script src="script.js"></script>
+
+        <div class="pantalla"></div>  
+        
+        <div id="puntaje" class="puntaje">
+            Puntaje:<br>000
+        </div>
+</body>
+</html>
